@@ -48,21 +48,21 @@ void setup()
   loadcell_dudukan.set_scale(kalibrasi_dudukan);
   loadcell_dudukan.tare();
   Serial.println();
-  Serial.println("inisialisasi dudukan selesai");
+  // Serial.println("inisialisasi dudukan selesai");
   delay(500);
 
   // program loadcell kedua
   loadcell_sandaran.begin(loadcell_sandaran_dt, loadcell_sandaran_sck);
   loadcell_sandaran.set_scale(kalibrasi_sandaran);
   loadcell_sandaran.tare();
-  Serial.println("inisialisasi sandaran selesai");
-  delay(100);
-
-  Serial.println("siap!");
-  Serial.println("------------------");
-  Serial.println("M = untuk mulai");
-  Serial.println("B = untuk berhenti");
+  // Serial.println("inisialisasi sandaran selesai");
   delay(500);
+
+  // Serial.println("siap!");
+  // Serial.println("------------------");
+  // Serial.println("M = untuk mulai");
+  // Serial.println("B = untuk berhenti");
+  // delay(500);
 }
 
 void loop()
@@ -98,16 +98,16 @@ void loop()
   // mengrimkan data ke komputer
   if (nilai_ke < 10000 && mulai_program)
   {
-    Serial.print("nilai_ke: ");
+    // Serial.print("nilai_ke: ");
     Serial.print(nilai_ke);
-    Serial.print(" ");
-    Serial.print("nilai_dudukan: ");
+    Serial.print(",");
+    // Serial.print("nilai_dudukan: ");
     Serial.print(nilai_dudukan);
-    Serial.print(" ");
-    Serial.print("nilai_sandaran: ");
+    Serial.print(",");
+    // Serial.print("nilai_sandaran: ");
     Serial.print(nilai_sandaran);
-    Serial.print(" ");
-    Serial.print("nilai_relay: ");
+    Serial.print(",");
+    // Serial.print("nilai_relay: ");
     Serial.println(nilai_relay);
   }
 }
